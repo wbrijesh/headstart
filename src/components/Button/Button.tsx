@@ -1,5 +1,4 @@
 import React from "react";
-import "./Button.css";
 import "../../styles/tailwind.css";
 
 export interface ButtonProps {
@@ -8,9 +7,14 @@ export interface ButtonProps {
 
 const Button = (props: ButtonProps) => {
   return (
-    <button className="rounded-full border border-gray-500 px-4 py-1.5 text-sm text-gray-700">
-      {props.label}
-    </button>
+    <>
+      <button
+        style={{ color: "pink" }}
+        className="rounded-full border border-gray-500 px-4 py-1.5 text-sm text-gray-700"
+      >
+        {props.label}
+      </button>
+    </>
   );
 };
 
