@@ -1,21 +1,15 @@
 import React from "react";
 import "../../styles/tailwind.css";
-
-export interface ButtonProps {
-  label: string;
-}
+import { generateClasses } from "../../utils";
+import { ButtonClassesData } from "../../data";
+import { ButtonProps } from "../../../types";
 
 const Button = (props: ButtonProps) => {
-  return (
-    <>
-      <button
-        style={{ color: "pink" }}
-        className="rounded-full border border-gray-500 px-4 py-1.5 text-sm text-gray-700"
-      >
-        {props.label}
-      </button>
-    </>
-  );
+  let classesString;
+  React.useEffect(() => {
+    classesString = generateClasses(ButtonClassesData, props);
+  }, [ButtonClassesData, props]);
+  return <button className={classesString}>{props.label}</button>;
 };
 
 export default Button;
