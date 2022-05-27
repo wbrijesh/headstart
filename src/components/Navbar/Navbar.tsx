@@ -1,14 +1,6 @@
 import React from "react";
 import "../../styles/tailwind.css";
-
-export interface NavbarProps {
-  name: string;
-  logo?: React.ReactNode;
-  left?: React.ReactNode[];
-  right?: React.ReactNode[];
-  fixed?: boolean;
-  explicitStyle?: React.CSSProperties;
-}
+import { NavbarProps } from "../../../types";
 
 const Navbar = (props: NavbarProps) => {
   return (

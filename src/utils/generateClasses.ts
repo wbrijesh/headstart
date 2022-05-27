@@ -1,12 +1,4 @@
-interface ClassDataType {
-  property: string;
-  label: string;
-  class: string;
-  condition?: {
-    property: string;
-    value: string;
-  };
-}
+import { ClassDataType } from "../../types";
 
 const generateClasses = (data: ClassDataType[], config: any) => {
   let classStringTemp = "";
